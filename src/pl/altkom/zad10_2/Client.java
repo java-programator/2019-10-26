@@ -6,11 +6,17 @@ enum Language {
 
 public class Client {
     public static void main(String[] args) {
-        Translator t =
-                TranslatorProvider
-                        .createTranslator(Language.EN);
+        TranslatorFactory factory = null;
+        Language l = Language.EN;
 
-        System.out.println(t.translate("piłka"));
-        System.out.println(t.translate("głowa"));
+        if (l == Language.EN) {
+            factory = new EnglishTranslatorFactory();
+        } else {
+            factory = new GermanTranslatorFactory();
+        }
+
+        System.out.println(factory.createTranslator().translate("piłka"));
+        System.out.println(factory.createTranslator().translate("głowa"));
+
     }
 }
