@@ -12,5 +12,7 @@ public class Client {
 
         System.out.println(t.translate("piłka"));
         System.out.println(t.translate("głowa"));
+
+        Translator t1 = new TranslatorProvider.EnglishTranslator();
     }
 }
