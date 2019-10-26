@@ -8,7 +8,7 @@ public class Client {
     public static void main(String[] args) {
         Translator t =
                 TranslatorProvider
-                        .createTranslator(Language.GR);
+                        .createTranslator(Language.EN);
 
         System.out.println(t.translate("piłka"));
         System.out.println(t.translate("głowa"));
