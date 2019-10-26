@@ -1,9 +1,9 @@
 package pl.altkom.accounts;
 
 public class TransactionManager {
-    private TransactionManager instance;
+    private static TransactionManager instance;
 
-    public TransactionManager getInstance() {
+    public static TransactionManager getInstance() {
         if (instance == null) {
             instance = new TransactionManager();
         }
