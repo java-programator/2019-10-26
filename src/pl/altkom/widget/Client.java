@@ -7,7 +7,7 @@ public class Client {
         Window w = factory.createWindow();
         w.addButton(factory.createButton());
         w.addButton(factory.createButton());
-        w.addLable(factory.createLable());
+        w.addLable(factory.createLabel());
 
 
     }
